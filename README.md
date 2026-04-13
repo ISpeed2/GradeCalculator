@@ -22,29 +22,22 @@ cmake ..
 cmake --build .
 ```
 
-### С помощью g++ (MinGW)
-
-```bash
-g++ -std=c++17 -o GradeCalculator src/main.cpp src/student.cpp src/gradebook.cpp src/utils.cpp src/filemanager.cpp
-./GradeCalculator
-```
-
 ### С помощью Docker
 
-Создать образ и запустить контейнер можно двумя способами: через чистый Docker или с помощью Docker Compose. Возможные данные (`data.txt`) сохранятся даже после перезапуска благодаря volume.
+Создать образ и запустить контейнер можно двумя способами: через чистый Docker или с помощью Docker Compose.
 
 **Вариант 1. Использование Docker CLI:**
 ```bash
 # Сборка образа
 docker build -t grade-calculator .
 
-# Запуск интерактивного контейнера (флаг -it ОБЯЗАТЕЛЬНЫ для консольного приложения)
+# Запуск интерактивного контейнера 
 docker run -it grade-calculator
 ```
 
 **Вариант 2. Использование Docker Compose:**
 ```bash
-# Сборка и запуск контейнера (одной командой)
+# Сборка и запуск контейнера 
 docker-compose up -d
 
 # Подключение к запущенному контейнеру для взаимодействия с меню
@@ -68,7 +61,7 @@ docker-compose down
     └── filemanager.h/.cpp# Работа с файлами
 ```
 
-## Линтинг и Форматирование (pre-commit)
+## Линтинг и Форматирование 
 
 Код этого проекта автоматически проверяется на соответствие стандартам (стиль Google, проверки cppcheck). Для этого используется утилита `pre-commit`.
 
@@ -106,6 +99,9 @@ docker-compose down
 ║  0. Выход                            ║
 ╚══════════════════════════════════════╝
 ```
+
+<img width="633" height="463" alt="image" src="https://github.com/user-attachments/assets/43fcce4c-38b0-4ce3-9c5e-794db5d6b474" />
+
 
 ## Система оценок
 
