@@ -1,0 +1,26 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.sln
+*.vcxproj*
+*.user
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Data files (user-generated)
+*.dat
