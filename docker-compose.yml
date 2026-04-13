@@ -1,0 +1,8 @@
+services:
+  grade-calculator:
+    build: .
+    container_name: grade-calculator-app
+    # Интерактивный режим важен для консольного приложения
+    stdin_open: true # эквивалент ключа -i в docker run
+    tty: true        # эквивалент ключа -t в docker run
+

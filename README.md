@@ -29,6 +29,31 @@ g++ -std=c++17 -o GradeCalculator src/main.cpp src/student.cpp src/gradebook.cpp
 ./GradeCalculator
 ```
 
+### С помощью Docker
+
+Создать образ и запустить контейнер можно двумя способами: через чистый Docker или с помощью Docker Compose. Возможные данные (`data.txt`) сохранятся даже после перезапуска благодаря volume.
+
+**Вариант 1. Использование Docker CLI:**
+```bash
+# Сборка образа
+docker build -t grade-calculator .
+
+# Запуск интерактивного контейнера (флаг -it ОБЯЗАТЕЛЬНЫ для консольного приложения)
+docker run -it grade-calculator
+```
+
+**Вариант 2. Использование Docker Compose:**
+```bash
+# Сборка и запуск контейнера (одной командой)
+docker-compose up -d
+
+# Подключение к запущенному контейнеру для взаимодействия с меню
+docker-compose exec grade-calculator ./build/GradeCalculator
+
+# Остановка контейнера
+docker-compose down
+```
+
 ## Структура проекта
 
 ```
